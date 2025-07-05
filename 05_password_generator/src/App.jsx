@@ -8,7 +8,6 @@ function App() {
 
 
  // useRef hook
-
  const passwordRef=useRef(null)
   
  const passwordGenerator=useCallback(()=>{
@@ -36,7 +35,7 @@ function App() {
 
  const copyPasswordToClickBoard =useCallback(()=>{
   passwordRef.current?.select()
-   passwordRef.current?.setSelectionRange(0,99)
+   passwordRef.current?.setSelectionRange(0,3)
   window.navigator.clipboard.writeText(password)
  },[password])
 
